@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 1px solid black;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 200px 0;
+}
+
+main {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.chat {
+  padding: 0 1rem;
+  flex: 1;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.chat > * {
+  flex-shrink: 0;
+}
+
+.chat > :first-child {
+  margin-top: auto;
+}
+
+.message {
+  display: flex;
+  height: 10rem;
+}
+
+.comment {
+  flex: 1;
+}
+
+.eval {
+  display: flex;
+  align-items: flex-end;
+}
+
+.column {
+  width: 100px;
+}
+
+.yes {
+  background-color: red;
+  animation: appear 1s ease-in;
+}
+
+.no {
+  background-color: green;
+  animation: appear 1s linear;
+}
+
+@keyframes appear {
+  from {
+    height: 0;
+  }
+}
+
